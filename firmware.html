@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050907">
+    <title>Firmware | Central PS4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CENTRAL <span>PS4</span></h1>
+        <p>Central de informações sobre desbloqueios</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="desbloqueios.html">Desbloqueios</a>
+    </nav>
+
+    <main>
+        <section class="destaque">
+            <h2 id="tituloFirmware">Firmware selecionado</h2>
+            <p>Informações e recursos relacionados a esta versão.</p>
+        </section>
+
+        <section>
+            <h2>Informações da versão</h2>
+            <p id="versaoSelecionada"></p>
+        </section>
+
+        <section id="hosts">
+            <h2>Hosts disponíveis</h2>
+                
+<div class="card">
+    <h3>RAWGAME (by Richard | Pai dos Macetes)</h3>
+    <p>Endereço do host:</p>
+
+    <input
+        type="text"
+        value="http://ps4.sentrix.ac"
+        readonly
+        class="host-link"
+    >
+
+    <button
+        class="copiar-host"
+        onclick="copiarHost(this)">
+        COPIAR LINK
+    </button>
+</div>
+
+<div class="card">
+    <h3>mps (by mansoor0x)</h3>
+
+    <p>Endereço do host:</p>
+
+    <input
+        type="text"
+        value="https://mansoor0x.github.io/mps/"
+        readonly
+        class="host-link"
+    >
+
+    <button
+        class="copiar-host"
+        onclick="copiarHost(this)">
+        COPIAR LINK
+    </button>
+</div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>CENTRAL PS4 © 2026 — Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+        const versao = parametros.get("versao");
+
+        const titulo = document.getElementById("tituloFirmware");
+        const texto = document.getElementById("versaoSelecionada");
+
+        if (versao && /^\d+\.\d+$/.test(versao)) {
+            titulo.textContent = "Firmware " + versao;
+            texto.textContent = "Versão selecionada: " + versao;
+            document.title = "Firmware " + versao + " | Central PS4";
+        } else {
+            titulo.textContent = "Firmware não identificado";
+            texto.textContent = "Volte ao catálogo e selecione uma versão.";
+        }
+    </script>
+
+
+<script>
+function copiarHost(botao) {
+    const campo = botao.previousElementSibling;
+
+    navigator.clipboard.writeText(campo.value).then(() => {
+        botao.textContent = "LINK COPIADO!";
+    }).catch(() => {
+        campo.select();
+        document.execCommand("copy");
+        botao.textContent = "LINK COPIADO!";
+    });
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmware 13.52 | Central PS4</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CENTRAL <span>PS4</span></h1>
+        <p>Hosts e informações do firmware 13.52</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../desbloqueios.html">Desbloqueios</a>
+    </nav>
+
+    <main>
+        <section class="destaque">
+            <h2>Firmware 13.52</h2>
+            <p>Central de hosts e recursos desta versão.</p>
+        </section>
+
+        <section>
+            <h2>Meus hosts</h2>
+
+           
+
+
+<div class="card">
+    <h3>RAW GAME</h3>
+
+    <p>Desenvolvido por:
+        <a
+            href="https://github.com/raw13g"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="credito">
+            Raw13g
+        </a>
+    </p>      
+
+    <p>Endereço do host:</p>
+
+    <input
+        type="text"
+        value="Raw13g.github.io"
+        readonly
+        class="host-link"
+    >
+
+    <button
+        class="copiar-host"
+        onclick="copiarHost(this)">
+        COPIAR LINK
+    </button>
+</div>
+
+<div class="card">
+    <h3>polpNO</h3>
+
+    <p>Desenvolvido por:
+        <a
+            href="https://github.com/mansoor0x"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="credito">
+            mansoor0x
+        </a>
+    </p>    
+
+
+    <p>Endereço do host:</p>
+
+    <input
+        type="text"
+        value="mansoor0x.github.io/polpNO/"
+        readonly
+        class="host-link"
+    >
+
+    <button
+        class="copiar-host"
+        onclick="copiarHost(this)">
+        COPIAR LINK
+    </button>
+</div>
+
+<div class="card">
+    <h3>Shadow's Services</h3>
+
+    <p>Desenvolvido por:
+        <a
+            href="https://github.com/WhiteShadow8500"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="credito">
+            White Shadow 8500
+        </a>
+    </p>    
+
+
+    <p>Endereço do host:</p>
+
+    <input
+        type="text"
+        value="https://whiteshadow8500.github.io/jb.html"
+        readonly
+        class="host-link"
+    >
+
+    <button
+        class="copiar-host"
+        onclick="copiarHost(this)">
+        COPIAR LINK
+    </button>
+</div>
+
+<div class="card">
+    <h3>PS PULSE</h3>
+
+    <p>Desenvolvido por:
+        <a
+            href="https://github.com/sudoBlackArch"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="credito">
+            Black Arch
+        </a>
+    </p>    
+
+
+    <p>Endereço do host:</p>
+
+    <input
+        type="text"
+        value="https://psx8.github.io/1352/jb.html?log=1"
+        readonly
+        class="host-link"
+    >
+
+    <button
+        class="copiar-host"
+        onclick="copiarHost(this)">
+        COPIAR LINK
+    </button>
+</div>
+
+<div class="card">
+    <h3>NADA REPUBLICANO</h3>
+
+    <p>Desenvolvido por:
+        <a
+            href="https://www.tiktok.com/@explosaodogame"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="credito">
+            VINAS (Explosão do Game)
+        </a>
+    </p>    
+
+
+    <p>Endereço do host:</p>
+
+    <input
+        type="text"
+        value="vinasxexplosao.github.io/NADAREPUBLICANOPS4/jb.html"
+        readonly
+        class="host-link"
+    >
+
+    <button
+        class="copiar-host"
+        onclick="copiarHost(this)">
+        COPIAR LINK
+    </button>
+</div>
+
+<div class="card">
+    <h3>g2all</h3>
+
+    <p>Desenvolvido por:
+        <a
+            href="https://github.com/GamerHack"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="credito">
+            GamerHack
+        </a>    
+    </p>    
+
+
+    <p>Endereço do host:</p>
+
+    <input
+        type="text"
+        value="https://gamerhack.github.io/g2all"
+        readonly
+        class="host-link"
+    >
+
+    <button
+        class="copiar-host"
+        onclick="copiarHost(this)">
+        COPIAR LINK
+    </button>
+</div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>CENTRAL PS4 © 2026 — Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function copiarHost(botao) {
+            const campo = botao.previousElementSibling;
+
+            navigator.clipboard.writeText(campo.value).then(() => {
+                botao.textContent = "LINK COPIADO!";
+            }).catch(() => {
+                campo.select();
+                document.execCommand("copy");
+                botao.textContent = "LINK COPIADO!";
+            });
+        }
+    </script>
+
+</body>
+</html>
