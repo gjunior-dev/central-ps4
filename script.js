@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "10.01", "10.50", "11.00", "11.02",
         "11.50", "11.52", "12.00", "12.02",
         "12.50", "12.52", "13.00", "13.02",
-        "13.50", "13.52", "14.00"
+        "13.50", "13.52", "14.00", "14.02",
     ];
 
     const lista = document.getElementById("listaFirmwares");

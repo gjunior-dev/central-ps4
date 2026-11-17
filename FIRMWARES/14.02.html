@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmware 14.02 | Central PS4</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CENTRAL <span>PS4</span></h1>
+        <p>Hosts e informações do firmware 14.02</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../desbloqueios.html">Desbloqueios</a>
+    </nav>
+
+    <main>
+        <section class="destaque">
+            <h2>Firmware 14.02</h2>
+            <p>Informações sobre o desbloqueio Afterglow e hosts disponíveis para esta versão.</p>
+        </section>
+
+
+
+        <section>
+            <h2>Meus hosts</h2>
+
+            <div class="card">
+                <h3>WebKitty.net</h3>
+
+                <p>Desenvolvido por:
+                    <a
+                        href="https://github.com/ArabPixel"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="credito">
+                        ArabPixel
+                    </a>
+                </p>
+
+                <p>Endereço do host:</p>
+
+                <input
+                    type="text"
+                    value="http://webkitty.arabpixel.net/"
+                    readonly
+                    class="host-link"
+                >
+
+                <button
+                    class="copiar-host"
+                    onclick="copiarHost(this)">
+                    COPIAR LINK
+                </button>
+
+                
+
+            </div>
+        </section>
+
+        <section>
+            <h2>⚠️ Avisos importantes</h2>
+
+            <div class="card">
+                <p>
+                    Este método é baseado em projetos comunitários.
+                    A Central PS4 não desenvolveu o exploit nem o host.
+                </p>
+
+                <p>
+                    A inclusão do GoldHEN v2.4b18.14 nesse host
+                    não representa suporte oficial confirmado
+                    pela equipe GoldHEN ao firmware 14.02.
+                </p>
+
+                <p>
+                    A execução de exploits pode apresentar falhas,
+                    travamentos e reinicializações inesperadas.
+                </p>
+
+                <p>
+                    Faça backup dos seus dados importantes e
+                    consulte as informações dos desenvolvedores
+                    antes de utilizar qualquer recurso.
+                </p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>CENTRAL PS4 © 2026 — Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function copiarHost(botao) {
+            const campo = botao.previousElementSibling;
+
+            navigator.clipboard.writeText(campo.value).then(() => {
+                botao.textContent = "LINK COPIADO!";
+            }).catch(() => {
+                campo.select();
+                document.execCommand("copy");
+                botao.textContent = "LINK COPIADO!";
+            });
+        }
+    </script>
+
+</body>
+</html>
