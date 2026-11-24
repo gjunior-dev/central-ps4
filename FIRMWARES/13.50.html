@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmware 13.50 | Central PS4</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CENTRAL <span>PS4</span></h1>
+        <p>Hosts e informações do firmware 13.50</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="../desbloqueios.html">Desbloqueios</a>
+    </nav>
+
+    <main>
+        <section class="destaque">
+            <h2>Firmware 13.50</h2>
+            <p>Central de hosts e recursos desta versão.</p>
+        </section>
+
+        <section>
+            <h2>Sobre o desbloqueio</h2>
+
+            <div class="card">
+                <h3>Slopkit + Relapse</h3>
+
+                <p>
+                    O firmware 13.50 possui uma cadeia pública de
+                    exploits que utiliza uma vulnerabilidade do
+                    navegador do PS4 e um exploit de kernel.
+                </p>
+
+                <p>
+                    Essa combinação permite alcançar o acesso
+                    necessário para executar um Homebrew Enabler.
+                </p>
+
+                <p>
+                    <strong>Compatibilidade:</strong> 13.50.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Meus hosts</h2>
+
+            <div class="card">
+                <h3>RAW13G</h3>
+
+                <p>Projeto comunitário de jailbreak para PS4.</p>
+
+                <p>Endereço do host:</p>
+
+                <input
+                    type="text"
+                    value="https://raw13g.github.io/"
+                    readonly
+                    class="host-link"
+                >
+
+                <button
+                    class="copiar-host"
+                    onclick="copiarHost(this)">
+                    COPIAR LINK
+                </button>
+            </div>
+
+            <!-- Adicione seus outros hosts aqui -->
+        </section>
+
+        <section>
+            <h2>GoldHEN</h2>
+
+            <div class="card">
+                
+                    <a
+                        href="https://github.com/GoldHEN/GoldHEN/releases"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Ver versões e lançamentos do GoldHEN →
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        
+
+        <section>
+            <h2>Fontes e referências</h2>
+
+            <div class="card">
+                <p>
+                    <a
+                        href="https://consolemods.org/wiki/PS4:Exploit_Chart"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        ConsoleMods — Tabela de compatibilidade →
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        href="https://github.com/GoldHEN/GoldHEN"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Repositório oficial do GoldHEN →
+                    </a>
+                </p>
+
+                <p>
+                    <a
+                        href="https://github.com/eddieygaming/ps4aio"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Projeto PS4 AIO →
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CENTRAL PS4 © 2026 — Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function copiarHost(botao) {
+            const campo = botao.previousElementSibling;
+
+            navigator.clipboard.writeText(campo.value).then(() => {
+                botao.textContent = "LINK COPIADO!";
+            }).catch(() => {
+                campo.select();
+                document.execCommand("copy");
+                botao.textContent = "LINK COPIADO!";
+            });
+        }
+    </script>
+
+</body>
+</html>
